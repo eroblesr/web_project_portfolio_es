@@ -14,8 +14,7 @@ body {
 }
 .name {
   font-family: "Archivo Black";
-  font-weight: 400;
-  font-style: Regular;
+  font-weight: Regular;
   font-size: 72px;
   line-height: 100%;
   max-width: 793px;
@@ -27,8 +26,7 @@ body {
 }
 .career {
   font-family: "Open Sans";
-  font-weight: 400;
-  font-style: Regular;
+  font-weight: Regular;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -39,8 +37,7 @@ body {
 }
 .description {
   font-family: "Open Sans";
-  font-weight: 400;
-  font-style: Regular;
+  font-weight: Regular;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -57,8 +54,7 @@ body {
 }
 .item_li {
   font-family: "Open Sans";
-  font-weight: 600;
-  font-style: SemiBold;
+  font-weight: SemiBold;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -83,8 +79,7 @@ body {
 }
 .titles {
   font-family: "Archivo Black";
-  font-weight: 400;
-  font-style: Regular;
+  font-weight: Regular;
   font-size: 40px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -107,17 +102,19 @@ body {
 }
 .project_title {
   font-family: "Open Sans";
-  font-weight: 700;
-  font-style: Bold;
+  font-weight: Bold;
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0%;
+  max-width: 339px;
+  max-height: 33px;
 }
 .project_description {
   font-family: "Open Sans";
-  font-weight: 400;
-  font-style: Regular;
+  font-weight: Regular;
   font-size: 18px;
+  max-width: 530px;
+  max-height: 175px;
 }
 .project_card_links {
   margin-top: 30px;
@@ -187,8 +184,7 @@ body {
 }
 .link_student {
   font-family: "Open Sans";
-  font-weight: 400;
-  font-style: Regular;
+  font-weight: 400px;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -216,4 +212,65 @@ body {
   top: 1600px;
   left: 50%;
   transform: translateX(-50%);
+}
+/*Configuracion para pantallas de 768px*/
+@media screen and (max-width: 768px) {
+  .name {
+    font-size: 58px;
+    max-width: 434px;
+    max-height: 127px;
+    margin: 40px 38px 0 40px;
+  }
+  .career {
+    line-height: 100%;
+    max-width: 452px;
+    max-height: 50px;
+    margin: 14px 20px 0 40px;
+  }
+  .description {
+    max-width: 452px;
+    max-height: 276px;
+    margin: 20px 20px 0px 40px;
+  }
+  .items {
+    margin: 20px 0 0 40px;
+  }
+  .item_li {
+    padding-bottom: 10px;
+  }
+  .profile_photo {
+    width: 216px;
+    height: 280px;
+    margin: 40px 40px 0 0;
+  }
+  .titles {
+    margin: 80px 125px 0 40px;
+  }
+  .icons {
+    gap: 78px;
+    margin: 40px 38px 0 40px;
+  }
+  .titles.projects {
+    margin: 80px 241px 0 40px;
+    max-width: 487px;
+  }
+  .project_grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 30px 40px 0 40px;
+  }
+
+  .project_description {
+    max-width: 628px;
+    max-height: 175px;
+  }
+  .circle_hero {
+    top: 40px;
+    left: 400px;
+  }
+  .circle_contact {
+    top: 2000px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
