@@ -1,6 +1,17 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Archivo Black";
+  src: url("../fonts/ArchivoBlack-Regular.woff2") format("woff2");
+}
+
 body {
   background-color: black;
   color: #fff;
+  font-family: "Open Sans", sans-serif;
 }
 .header {
   display: flex;
@@ -14,11 +25,10 @@ body {
 }
 .name {
   font-family: "Archivo Black";
-  font-weight: Regular;
+  font-weight: 400;
   font-size: 72px;
   line-height: 100%;
   max-width: 793px;
-  max-height: 156px;
   margin: 89px 20px 0 120px;
 }
 .name span {
@@ -26,23 +36,21 @@ body {
 }
 .career {
   font-family: "Open Sans";
-  font-weight: Regular;
+  font-weight: 400;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
   color: rgba(255, 255, 255, 0.5);
   max-width: 790px;
-  max-height: 25px;
   margin: 15px 23px 0 120px;
 }
 .description {
   font-family: "Open Sans";
-  font-weight: Regular;
+  font-weight: 400;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
   max-width: 793px;
-  max-height: 150px;
   margin: 30px 20px 0px 120px;
 }
 .items {
@@ -54,7 +62,7 @@ body {
 }
 .item_li {
   font-family: "Open Sans";
-  font-weight: SemiBold;
+  font-weight: 600;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -79,13 +87,12 @@ body {
 }
 .titles {
   font-family: "Archivo Black";
-  font-weight: Regular;
+  font-weight: 400;
   font-size: 40px;
   line-height: 100%;
   letter-spacing: 0%;
-  margin: 110px 717px 0 120px;
+  margin: 110px auto 0;
   max-width: 603px;
-  max-height: 44px;
 }
 .icons {
   display: flex;
@@ -93,6 +100,7 @@ body {
   margin: 50px 120px 0 120px;
   list-style: none;
   padding: 0;
+  flex-wrap: wrap;
 }
 .project_grid {
   display: grid;
@@ -102,12 +110,11 @@ body {
 }
 .project_title {
   font-family: "Open Sans";
-  font-weight: Bold;
+  font-weight: 700;
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0%;
   max-width: 339px;
-  max-height: 33px;
 }
 
 .project_card_links {
@@ -131,7 +138,7 @@ body {
 .project_card_img {
   width: 100%;
   display: block;
-  max-height: 330px;
+  aspect-ratio: 16/9;
   object-fit: cover;
 }
 .project_content {
@@ -182,7 +189,7 @@ body {
 }
 .link_student {
   font-family: "Open Sans";
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -204,30 +211,47 @@ body {
 }
 .circle_hero {
   top: 240px;
-  left: 933px;
+  right: 0;
 }
 .circle_contact {
   top: 1600px;
   left: 50%;
   transform: translateX(-50%);
 }
+a:hover {
+  opacity: 0.7;
+}
+
+.project_card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+.project_img_container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.project_card:hover .project_img_container::before {
+  opacity: 1;
+}
 /*Configuracion para pantallas de 768px*/
 @media screen and (max-width: 768px) {
   .name {
     font-size: 58px;
     max-width: 434px;
-    max-height: 127px;
     margin: 40px 38px 0 40px;
   }
   .career {
     line-height: 100%;
     max-width: 452px;
-    max-height: 50px;
     margin: 14px 20px 0 40px;
   }
   .description {
     max-width: 452px;
-    max-height: 276px;
     margin: 20px 20px 0px 40px;
   }
   .items {
@@ -280,19 +304,16 @@ body {
     .name {
       font-size: 36px;
       max-width: 280px;
-      max-height: 78px;
       margin: 30px 20px 0 20px;
     }
     .career {
       font-size: 16px;
       max-width: 280px;
-      max-height: 44px;
       margin: 10px 20px 0 20px;
     }
     .description {
       font-size: 16px;
       max-width: 280px;
-      max-height: 330px;
       margin: 20px 20px 0px 20px;
     }
     .items {
@@ -355,7 +376,7 @@ body {
     }
     .project_card_img {
       width: 100%;
-      height: 160px;
+      aspect-ratio: 16/9;
     }
   }
 }
